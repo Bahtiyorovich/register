@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Customers List</title>
+    <link rel="stylesheet" href="{% static 'css/customers_list.css' %}">
+</head>
+<body>
+
+<h2>Customers List</h2>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FullName</th>
+        <th>Email Address</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in customers %}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.full_name}}</td>
+        <td>{{i.email}}</td>
+      </tr>
+    {%endfor%}
+    </tbody>
+
+</table>
+
+</body>
+</html>
+

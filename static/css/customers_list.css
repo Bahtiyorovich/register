@@ -1,0 +1,32 @@
+body {
+  height: 98vh;
+  width: 100vw;
+  background-image: linear-gradient(to left, #6f23f1, #a95ed3);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  overflow-y: auto;
+  background: #efebeb;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background: teal;
+  color:#fff;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

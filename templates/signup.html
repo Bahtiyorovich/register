@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>CONTACT USE</h2>
+        <form method="POST">
+            {% csrf_token %}
+          <fieldset>
+            <legend>FULL NAME</legend>
+            <input type="text" name="full_name">
+          </fieldset>
+          <fieldset>
+            <legend>EMAIL ADDRESS</legend>
+            <input type="email"  name="email">
+          </fieldset>
+
+          <fieldset>
+              <legend>MESSAGE</legend>
+              <textarea type="text"  name="message"></textarea>
+          </fieldset>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </div>
+</body>
+</html>
