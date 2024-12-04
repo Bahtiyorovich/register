@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth</title>
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Event Registrations Form</h3>
+        </header>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form__container">
+                <p>Name</p>
+                <div class="form__container__inputs">
+                    <div class="input__section">
+                      <label>
+                        <input type="text" name="first_name" class="input">
+                      </label>
+                        <p>First Name</p>
+                    </div>
+                    <div class="input__section">
+                      <label>
+                        <input type="text" name="last_name" class="input">
+                      </label>
+                        <p>Last Name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="textarea_email">
+                <p>Company</p>
+                <label>
+                    <textarea id="company" name="company"></textarea>
+                </label>
+            </div>
+            <div class="textarea_email">
+                <p>Email</p>
+                <label>
+                    <input id="email" type="email" name="email">
+                </label>
+            </div>
+            <div class="form__container">
+                <p>Phone</p>
+                <div class="form__container__inputs">
+                    <div class="input__section">
+                      <label>
+                        <input type="text" name="phone_number" class="input">
+                      </label>
+                        <p>Phone Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form__section">
+                <label for="cars">Subject:</label>
+                <select id="cars" name="subject">
+                  <option value="subject1">Subject1</option>
+                  <option value="subject2">Subject2</option>
+                </select>
+            </div>
+            <div class="form__radio">
+                <p>Are you an existing customer?</p>
+                <section>
+                    <label>
+                        <input type="radio" name="exist">
+                        <span>Yes</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="exist">
+                        <span>No</span>
+                    </label>
+                </section>
+            </div>
+            <div class="btn">
+                <button type="submit" class="button">REGISTER</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
